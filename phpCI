@@ -12,7 +12,11 @@ echo "Running data"
  --admin-pass=$PHPCI_ADMIN_PASSWORD\
  --admin-mail=$PHPCI_ADMIN_MAIL
 
+echo "Activating htaccess and Fixing permissions"
+
 mv public/.htaccess.dist public/.htaccess
+chown -R www-data:root .
+
 php daemonise phpci:daemonise &
 
 apache2-foreground
