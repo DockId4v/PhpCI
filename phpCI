@@ -13,5 +13,6 @@ echo "Running data"
  --admin-mail=$PHPCI_ADMIN_MAIL
 
 mv public/.htaccess.dist public/.htaccess
+php daemonise phpci:daemonise &
 
 apache2-foreground
