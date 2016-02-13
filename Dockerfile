@@ -1,4 +1,4 @@
-FROM id4v/webdev
+FROM id4v/webdev:5.6
 
 WORKDIR /var/www/html
 RUN apt-get install -y zlibc zlib1g zlib1g-dev
